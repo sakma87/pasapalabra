@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pasapalabra HTML</title>
+</head>
+<link rel="stylesheet" type="text/css" href="pasapalabra.css">
+<script type="text/javascript" src="pasapalabra.js"></script>
+<body>
+	<div id="All">
+		<img id="imgPasapalbra" src="pasapalabra_f703.png">
+		<div id="Menu">
+			<div id="Presentation">
+			<p>Bienvenido a Pasapalabra.</p>
+			<p>Deberas acertar la palabra correspondiente a la letra que toque en funcion de la definicion que se te mostrara, en caso de no saber la palabra puedes usar PASAPALABRA para pasar a la siguiente letra.</p>
+			<p>Por cada palabra correcta se te sumara un punto.</p>
+			<p>Buena suerte!</p>
+			</div>
+			<div class="container"> 
+				<div class="group">      
+					<input autocomplete="off" class="asd" id="PlayerName" type="text" required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label class="labelFancy">Introduce tu nombre:</label>
+				</div>
+			</div>
+			<input class="button" type="button" id="playButton" name="playButton" onclick="play()" value="JUGAR">
+			<input class="button" type="button" onclick="showRanking()" value="Mostrar Ranking">
+		</div>
+		<div id="Rosco" style="display: none;">
+			<div class="circle-container">
+				<h3 id="Questions"></h3>
+				<p class='dot tick' id="CircleA">A</p>
+				<p class='dot tick' id="CircleB">B</p>
+				<p class='dot tick' id="CircleC">C</p>
+				<p class='dot tick' id="CircleD">D</p>
+				<p class='dot tick' id="CircleE">E</p>
+				<p class='dot tick' id="CircleF">F</p>
+				<p class='dot tick' id="CircleG">G</p>
+				<p class='dot tick' id="CircleH">H</p>
+				<p class='dot tick' id="CircleI">I</p>
+				<p class='dot tick' id="CircleJ">J</p>
+				<p class='dot tick' id="CircleK">K</p>
+				<p class='dot tick' id="CircleL">L</p>
+				<p class='dot tick' id="CircleM">M</p>
+				<p class='dot tick' id="CircleN">N</p>
+				<p class='dot tick' id="CircleÑ">Ñ</p>
+				<p class='dot tick' id="CircleO">O</p>
+				<p class='dot tick' id="CircleP">P</p>
+				<p class='dot tick' id="CircleQ">Q</p>
+				<p class='dot tick' id="CircleR">R</p>
+				<p class='dot tick' id="CircleS">S</p>
+				<p class='dot tick' id="CircleT">T</p>
+				<p class='dot tick' id="CircleU">U</p>
+				<p class='dot tick' id="CircleV">V</p>
+				<p class='dot tick' id="CircleW">W</p>
+				<p class='dot tick' id="CircleX">X</p>
+				<p class='dot tick' id="CircleY">Y</p>
+				<p class='dot tick' id="CircleZ">Z</p>
+
+			</div>
+			
+			<span id="buttonsGame">
+				<div class="container">  
+					<div class="group">      
+						<input autocomplete="off" class="asd" id="answerBox" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label class="labelFancy">Respuesta:</label>
+					</div>
+					<input class="button" id="sendAnswer" type="button" onclick="sendAnswer()" value="Enviar">
+					<input class="button"  type="button" onclick="pasapalabra()" value="Pasapalabra">
+					<input class="button" id="endButton" type="button" onclick="end()" value="Finalizar Juego">   
+				</div>
+			</span>
+
+			<span id="buttonEndTime" style="display: none;">
+				<input class="button"  type="button" onclick="back()" value="Volver a jugar">
+				<input class="button" type="button" onclick="showRanking()" value="Mostrar Ranking">
+			</span>
+			<br><br><br>
+			<span class="cajaDiv">
+				<label>Aciertos: </label>
+				<label id="CurrentPlayer"></label>
+			</span>
+			<span class="cajaDiv">
+				<label>Tiempo:</label>
+				<label id="CountDown">150</label>
+			</span>
+		</div>
+		<div id="Ranking" style="display: none;">
+			<table id=TableRanking cellspacing="0" cellpadding="0">
+			  <tr>
+			    <th>Jugador:</th>
+			    <th>Puntos:</th>
+			  </tr>
+			</table>
+			<input class="button"  type="button" onclick="back()" value="Atras">
+		</div>
+	</div>
+</body>
+</html>
+
